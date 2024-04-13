@@ -1,10 +1,6 @@
 # Imported python functions
 import os
 import shutil
-import base64
-
-#Encrypt code so it won't bug 
-automatedFilesystem = base64.b64encode
 
 # Select file by using file path in order to automate file manager
 path = input("Enter path: ")
@@ -22,6 +18,4 @@ for file in files:
     #Otherwise create folder and move file into newly created folder
     else:
         os.makedirs(path+"/"+extension)
-        shutil.move(path+'/'+file, path+'/'+extension+'/'+file)   
-
-exec(base64.b64decode(automatedFilesystem))
+        shutil.move(path+'/'+file, path+'/'+extension+'/'+file)
